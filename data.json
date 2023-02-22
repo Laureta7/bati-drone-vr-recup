@@ -1,0 +1,14 @@
+[
+  {
+    "key": "plq-le-roliet/S00-190223.jpg",
+    "date": "19-02-23",
+    "sphere": "S00",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/S00-190223.jpg"
+  },
+  {
+    "key": "plq-le-roliet/S01-190223.jpg",
+    "date": "19-02-23",
+    "sphere": "S01",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/S01-190223.jpg"
+  }
+]
