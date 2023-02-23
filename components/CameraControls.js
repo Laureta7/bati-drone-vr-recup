@@ -17,8 +17,8 @@ function CameraControls() {
     controlsRef.current.update();
     const distance = camera.position.distanceTo(new THREE.Vector3(0, 0, 0));
     if (distance > sphereRadius) {
-      camera.position.setLength(sphereRadius);
-      controlsRef.current.update();
+      // camera.position.setLength(sphereRadius);
+      // controlsRef.current.update();
     }
   });
 

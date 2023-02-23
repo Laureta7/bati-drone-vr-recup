@@ -50,8 +50,10 @@ function PlqScene() {
   }, []);
 
   // les fonctions suivantes sont appelées lorsqu'un bouton est cliqué
-  const changeSphereTexture = () => {
+  const changeSphereTexture = (id) => {
     console.log("inside spheres : ", insideSpheres);
+
+    console.log("MEsg id ", id);
   };
 
   //Excécuter quand currentDate change
