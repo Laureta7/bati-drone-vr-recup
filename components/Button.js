@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 
-function Button({ position, onClick }) {
+function Button({ insideSpheres, position, onClick }) {
   const mesh = useRef();
   const [active, setActive] = useState(false);
 

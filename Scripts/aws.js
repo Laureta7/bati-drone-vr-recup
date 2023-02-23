@@ -46,7 +46,7 @@ s3.listObjects(params, (err, data) => {
     });
 
     const jsonData = JSON.stringify(result, null, 2);
-    fs.writeFile("../data.json", jsonData, (err) => {
+    fs.writeFile("../public/data.json", jsonData, (err) => {
       if (err) {
         console.log(err);
       } else {

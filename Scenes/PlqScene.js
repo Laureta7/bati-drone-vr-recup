@@ -1,75 +1,97 @@
 import React, { useState, useEffect } from "react";
+import { sortDatesDescending } from "../lib/functions";
+
 import { Canvas } from "@react-three/fiber";
 import MenuVisite from "../components/MenuVisite";
 import SphereWithTexture from "../components/SphereWithTexture";
 import CameraControls from "../components/CameraControls";
 import Button from "../components/Button";
 
-// Créer une instance AWS S3
-
 function PlqScene() {
+  // initialisation des différents états
   const [projectData, setProjectData] = useState([null]);
-  const [imgSrc, setImgSrc] = useState(
-    "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/S00-190223.jpg"
-  );
-  const [date, setDate] = useState("19-02-23");
+  const [imgSrc, setImgSrc] = useState([
+    "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/S00-190223.jpg",
+  ]);
+  const [imgUrls, setImgUrls] = useState([]);
+  const [currentDate, setCurrentDate] = useState("");
+  const [currentSphere, setCurrentSphere] = useState("S01");
+  const [insideSpheres, setInsideSpheres] = useState([]);
   const [items, setItems] = useState([]);
-  const it = ["el1", "el2"];
 
-  // useEffect(() => {
-  //   fetch("data.json")
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       setProjectData(data);
-  //       console.log(data);
-  //     })
-  //     .catch((error) => console.log(error));
-  // }, []);
-  const handleDateSelect = (date) => {
-    // Recherchez les objets du projet PLQ à la date sélectionnée
-    console.log("project " + projectData);
+  // useEffect est utilisé ici pour charger les données à partir d'un fichier JSON
+  useEffect(() => {
+    fetch("data.json")
+      .then((response) => response.json())
+      .then((data) => {
+        setProjectData(data);
+        const organizedData = {};
 
-    if (projectData.length > 0) {
-      const objects = projectData.filter(
-        (object) => object.date === date && object.project === "PLQ"
-      );
+        // les données sont organisées en fonction de leur date
+        data.forEach((obj) => {
+          const { date, sphere, imgUrl } = obj;
+          if (organizedData[date]) {
+            organizedData[date].push({ sphere, imgUrl });
+          } else {
+            organizedData[date] = [{ sphere, imgUrl }];
+          }
+        });
 
-      console.log(objects);
-    } else {
-      console.log("Les données du projet ne sont pas encore disponibles");
+        // les dates sont triées dans l'ordre décroissant
+        var organizedDates = Object.keys(organizedData);
+        organizedDates = sortDatesDescending(organizedDates);
+
+        // les dates triées sont ensuite stockées dans l'état items
+        setItems(organizedDates);
+        //Mettre à jour la date la plus récente [date]
+        setCurrentDate(organizedDates[0]);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+
+  // les fonctions suivantes sont appelées lorsqu'un bouton est cliqué
+  const changeSphereTexture = () => {
+    console.log("inside spheres : ", insideSpheres);
+  };
+
+  //Excécuter quand currentDate change
+  //Mais à jour l'array des images utilisé pour cette nouvelle date
+  useEffect(() => {
+    const urlsToAdd = [];
+    if (projectData) {
+      projectData.forEach((obj) => {
+        if (obj) {
+          const { date, sphere, imgUrl } = obj;
+          if (date === currentDate) {
+            urlsToAdd.push([sphere, imgUrl]);
+          }
+        }
+      });
+      setImgUrls(urlsToAdd);
     }
-  };
-  const handleButtonClick = () => {
-    if (
-      imgSrc ===
-      "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/190223-est.jpg"
-    ) {
-      setImgSrc(
-        "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/190223-west.jpg"
-      );
-    } else {
-      setImgSrc(
-        "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/190223-est.jpg"
-      );
-    }
-  };
-  const handleMenuButton = (date) => {
-    // Recherchez les objets du projet PLQ à la date sélectionnée
-    console.log("project " + projectData);
-    const objects = projectData.filter(
-      (object) => object.date === date && object.projet === "PLQ"
-    );
+  }, [currentDate]);
+  //Changement imgSrc apres cangemen setImgUrl
+  useEffect(() => {
+    const spheresToAdd = [];
+    imgUrls.forEach((obj) => {
+      const [sphere, imgUrl] = obj;
+      spheresToAdd.push(sphere);
 
-    // Stockez les objets dans une variable pour les utiliser dans votre application
+      if (sphere === currentSphere) {
+        console.log("Sphere ", sphere, " url ", imgUrl);
+        setImgSrc(imgUrl);
+      }
+    });
+    setInsideSpheres(spheresToAdd);
+  }, [imgUrls]);
+
+  const changeImgSrc = (date) => {
+    setCurrentDate(date);
   };
-  // const items = data.plq.map((plq) => plq.date);
-  // useEffect(() => {
-  //   console.log("data " + projectData[0].date);
-  // }, [projectData]);
 
   return (
     <div style={{ display: "flex", height: "100vh" }}>
-      <MenuVisite items={it} onDateSelect={handleMenuButton} />
+      <MenuVisite items={items} onDateSelect={changeImgSrc} />
 
       <div style={{ flex: "1", overflow: "hidden" }}>
         <Canvas style={{ height: "100%", width: "100%" }}>
@@ -78,9 +100,10 @@ function PlqScene() {
           <CameraControls />
           <SphereWithTexture imgSrc={imgSrc} position={[0, 0, 0]} />
           <Button
+            insideSpheres={insideSpheres}
             label="Cliquez-moi"
             position={[1.5, 0, 0]}
-            onClick={handleButtonClick}
+            onClick={changeSphereTexture}
           />
         </Canvas>
       </div>
