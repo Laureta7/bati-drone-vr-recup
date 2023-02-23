@@ -11,6 +11,10 @@ function MenuVisite(props) {
     height: "calc(100% / " + items.length + ")",
     width: "fit-content",
     cursor: "pointer", // Ajouter un curseur pour indiquer que l'élément est cliquable
+    display: "flex", // Ajouter un display flex pour aligner les éléments
+    alignItems: "center", // Centrer verticalement les éléments
+    justifyContent: "center", // Centrer horizontalement les éléments
+    border: "1px solid black",
   };
 
   const handleItemClick = (item) => {
@@ -23,11 +27,13 @@ function MenuVisite(props) {
       style={{
         display: "flex",
         flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
         minWidth: "fit-content",
-        position: "absolute",
-        top: "0",
-        left: "0",
-        zIndex: "10",
+        position: "relative",
+        margin: "0",
+        backgroundColor: "grey",
+        opacity: "0.9",
       }}
     >
       {items.map((item, index) => (

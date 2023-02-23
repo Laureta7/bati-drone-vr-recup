@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import { useLoader } from "@react-three/fiber";
 import * as THREE from "three";
 import { TextureLoader, RepeatWrapping } from "three";
 
@@ -9,6 +8,7 @@ function SphereWithTexture(props) {
 
   // Chargement de la texture de l'image
   const texture = new THREE.TextureLoader().load(imgSrc);
+  console.log("texture ", texture);
   // Chargement de la texture de l'image passée en props
   // const texture = useLoader(TextureLoader, imgSrc, (texture) => {
   //   texture.minFilter = THREE.LinearMipmapLinearFilter;
@@ -20,7 +20,7 @@ function SphereWithTexture(props) {
 
   return (
     <mesh {...props} ref={mesh}>
-      <sphereGeometry args={[2, 60, 40]} />
+      <sphereGeometry args={[1, 64, 32]} />
       <meshBasicMaterial map={texture} side={THREE.BackSide} />
     </mesh>
   );

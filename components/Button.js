@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 
-function Button({ insideSpheres, onClick }) {
+function Button({ insideSpheres, currentSphere, onClick }) {
   const [active, setActive] = useState(false);
   const length = insideSpheres.length;
   const positions = Array.from({ length: length }, (_, index) => [
@@ -10,18 +10,38 @@ function Button({ insideSpheres, onClick }) {
     0,
   ]);
 
+  const pos = [
+    [0.0, 0.0, 0.0],
+    [0.08614, 0.26667, 0.94743],
+    [-0.61448, 0.2, 0.24595],
+    [-0.2686, 0.13333, 0.17163],
+    [0.13704, 0.13333, 0.29262],
+    [0.13781, 0.1, 0.7164],
+    [0.56752, 0.1, 0.44191],
+    [0.30782, 0.1, -0.22172],
+    [-0.16431, 0.1, -0.19082],
+    [-0.08962, 0.06667, -0.41154],
+    [-0.67447, 0.1, -0.44607],
+  ];
+
   return (
     <>
-      {positions.map((position, index) => (
-        <Sphere
-          key={index}
-          id={insideSpheres[index]}
-          position={position}
-          onClick={onClick}
-          active={active}
-          setActive={setActive}
-        />
-      ))}
+      {pos.map((position, index) => {
+        if (insideSpheres[index] !== currentSphere) {
+          return (
+            <Sphere
+              key={index}
+              id={insideSpheres[index]}
+              position={position}
+              onClick={onClick}
+              active={active}
+              setActive={setActive}
+            />
+          );
+        } else {
+          return null;
+        }
+      })}
     </>
   );
 }
@@ -51,7 +71,7 @@ function Sphere({ position, onClick, active, setActive, id }) {
       onPointerOver={() => setHovered(true)} // Modification de l'état hovered
       onPointerOut={() => setHovered(false)} // Modification de l'état hovered
     >
-      <sphereGeometry args={[0.05, 32, 32]} />
+      <sphereGeometry args={[0.015, 32, 16]} />
       <meshStandardMaterial
         color={active ? "hotpink" : hovered ? "green" : "red"}
       />
