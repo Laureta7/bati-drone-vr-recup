@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { sortDatesDescending, sortObject } from "../lib/functions";
+import { sortObject } from "../lib/functions";
 import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
 import MenuVisite from "../components/MenuVisite";
@@ -9,7 +9,6 @@ import Button from "../components/Button";
 
 function BernexScene() {
   // initialisation des différents états
-  const [projectData, setProjectData] = useState([null]);
   const [imgSrc, setImgSrc] = useState([]);
   const [imgUrls, setImgUrls] = useState([]);
   const [currentDate, setCurrentDate] = useState("");
@@ -28,7 +27,6 @@ function BernexScene() {
     fetch("bernex.json")
       .then((response) => response.json())
       .then((data) => {
-        setProjectData(data);
         const organizedData = {};
         //console.log(data);
         // les données sont organisées en fonction de leur date
@@ -64,15 +62,12 @@ function BernexScene() {
   };
 
   useEffect(() => {
-    console.log("Current sphere test ", currentSphere);
-
     if (datas[currentDate]) {
       datas[currentDate].forEach((obj) => {
         if (obj) {
           const { sphere, imgUrl } = obj;
           if (sphere === currentSphere) {
             setImgSrc(imgUrl);
-            console.log("new sphere ", sphere, " newURL ", imgUrl);
           }
         }
       });
@@ -84,20 +79,22 @@ function BernexScene() {
     if (datas[currentDate]) {
       datas[currentDate].forEach((obj) => {
         if (obj) {
-          const { sphere, imgUrl } = obj;
+          const { imgUrl } = obj;
           urlsToAdd.push(imgUrl);
         }
       });
       setImgUrls(urlsToAdd);
     }
   }, [currentDate]);
+  useEffect(() => {
+    console.log("new sphere ", currentSphere, " newURL ", imgSrc);
+  }, [imgSrc]);
 
   //Excécuter quand currentDate change
   //Mais à jour l'array des images utilisé pour cette nouvelle date
 
   //Changement imgSrc apres cangemen setImgUrl
   useEffect(() => {
-    console.log("Current sphere test ", currentSphere);
     const spheresToAdd = [];
 
     if (datas[currentDate]) {

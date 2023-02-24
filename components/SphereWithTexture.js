@@ -7,12 +7,8 @@ function SphereWithTexture(props) {
   const { imgSrc } = props;
 
   // Chargement de la texture de l'image
-  const texture = new THREE.TextureLoader().load(imgSrc);
-  console.log("texture ", texture);
-  // Chargement de la texture de l'image passée en props
-  // const texture = useLoader(TextureLoader, imgSrc, (texture) => {
-  //   texture.minFilter = THREE.LinearMipmapLinearFilter;
-  // });
+  const texture = new TextureLoader().load(imgSrc);
+
   texture.minFilter = THREE.LinearMipmapLinearFilter;
   texture.wrapS = texture.wrapT = RepeatWrapping;
   texture.offset.x = 1;

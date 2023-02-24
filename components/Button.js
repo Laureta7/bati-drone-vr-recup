@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 
 function Button({ insideSpheres, currentSphere, pos, onClick }) {
-  console.log("inside s", insideSpheres);
+  //console.log("inside s", insideSpheres);
   const [active, setActive] = useState(false);
   const length = insideSpheres.length;
   const positions = Array.from({ length: length }, (_, index) => [
