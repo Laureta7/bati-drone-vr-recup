@@ -1,342 +1,182 @@
 [
   {
-    "filename": "21-06-21-image360_EST.jpg",
-    "date": "21-06-21",
-    "GPSLatitude": [
-      46,
-      10,
-      50.5535
-    ],
-    "GPSLongitude": [
-      6,
-      4,
-      50.6053
-    ],
-    "sphere": "S02",
-    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-06-21-image360_EST.jpg",
-    "project": "bernex"
-  },
-  {
-    "filename": "21-06-21-image360_OUEST.jpg",
-    "date": "21-06-21",
-    "GPSLatitude": [
-      46,
-      10,
-      50.1531
-    ],
-    "GPSLongitude": [
-      6,
-      4,
-      47.19
-    ],
-    "sphere": "S01",
-    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-06-21-image360_OUEST.jpg",
-    "project": "bernex"
-  },
-  {
-    "filename": "21-09-21-Image_360_ EST.jpg",
-    "date": "21-09-21",
-    "GPSLatitude": [
-      46,
-      10,
-      51.0146
-    ],
-    "GPSLongitude": [
-      6,
-      4,
-      51.0386
-    ],
-    "sphere": "S02",
-    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-09-21-Image_360_ EST.jpg",
-    "project": "bernex"
-  },
-  {
-    "filename": "21-10-21-debutNovembre2021_360.jpg",
-    "date": "21-10-21",
-    "GPSLatitude": [
-      46,
-      10,
-      50.6945
-    ],
-    "GPSLongitude": [
-      6,
-      4,
-      50.7376
-    ],
-    "sphere": "S02",
-    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-10-21-debutNovembre2021_360.jpg",
-    "project": "bernex"
-  },
-  {
-    "filename": "21-09-21-Image_360_OUEST.jpg",
-    "date": "21-09-21",
-    "GPSLatitude": [
-      46,
-      10,
-      49.9128
-    ],
-    "GPSLongitude": [
-      6,
-      4,
-      47.1828
-    ],
-    "sphere": "S01",
-    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-09-21-Image_360_OUEST.jpg",
-    "project": "bernex"
-  },
-  {
-    "filename": "21-08-21-360-03.jpg",
-    "date": "21-08-21",
-    "GPSLatitude": [
-      46,
-      10,
-      49.9021
-    ],
-    "GPSLongitude": [
-      6,
-      4,
-      46.6994
-    ],
-    "sphere": "S01",
-    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-08-21-360-03.jpg",
-    "project": "bernex"
-  },
-  {
-    "filename": "21-10-21-debutNovembre2021_2eme360.jpg",
-    "date": "21-10-21",
-    "GPSLatitude": [
-      46,
-      10,
-      49.9806
-    ],
-    "GPSLongitude": [
-      6,
-      4,
-      47.1392
-    ],
-    "sphere": "S01",
-    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-10-21-debutNovembre2021_2eme360.jpg",
-    "project": "bernex"
-  },
-  {
-    "filename": "21-08-21-360-01.jpg",
-    "date": "21-08-21",
-    "GPSLatitude": [
-      46,
-      10,
-      49.8777
-    ],
-    "GPSLongitude": [
-      6,
-      4,
-      46.7067
-    ],
-    "sphere": "S01",
-    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-08-21-360-01.jpg",
-    "project": "bernex"
-  },
-  {
-    "filename": "21-05-21-Image_360_EST.jpg",
-    "date": "21-05-21",
-    "GPSLatitude": [
-      46,
-      10,
-      50.6254
-    ],
-    "GPSLongitude": [
-      6,
-      4,
-      50.5845
-    ],
-    "sphere": "S02",
+    "project": "bernex",
     "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-05-21-Image_360_EST.jpg",
-    "project": "bernex"
-  },
-  {
-    "filename": "22-02-22-fevrier2022_2eme360.jpg",
-    "date": "22-02-22",
-    "GPSLatitude": [
-      46,
-      10,
-      50.0953
-    ],
-    "GPSLongitude": [
-      6,
-      4,
-      47.1308
-    ],
-    "sphere": "S01",
-    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/22-02-22-fevrier2022_2eme360.jpg",
-    "project": "bernex"
-  },
-  {
-    "filename": "21-08-21-360-02.jpg",
-    "date": "21-08-21",
-    "GPSLatitude": [
-      46,
-      10,
-      50.2621
-    ],
-    "GPSLongitude": [
-      6,
-      4,
-      50.3262
-    ],
-    "sphere": "S02",
-    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-08-21-360-02.jpg",
-    "project": "bernex"
-  },
-  {
-    "filename": "21-11-21-finNovembre2022_2eme360.jpg",
-    "date": "21-11-21",
-    "GPSLatitude": [
-      46,
-      10,
-      50.6062
-    ],
-    "GPSLongitude": [
-      6,
-      4,
-      50.6772
-    ],
-    "sphere": "S02",
-    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-11-21-finNovembre2022_2eme360.jpg",
-    "project": "bernex"
-  },
-  {
-    "filename": "21-05-21-Image_360_OUEST.jpg",
     "date": "21-05-21",
-    "GPSLatitude": [
-      46,
-      10,
-      50.0598
-    ],
-    "GPSLongitude": [
-      6,
-      4,
-      46.4344
-    ],
-    "sphere": "S01",
+    "filename": "21-05-21-Image_360_EST.jpg",
+    "GPSLatitude": 46.18072927777778,
+    "GPSLongitude": 6.080717916666666,
+    "sphere": "S02"
+  },
+  {
+    "project": "bernex",
     "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-05-21-Image_360_OUEST.jpg",
-    "project": "bernex"
+    "date": "21-05-21",
+    "filename": "21-05-21-Image_360_OUEST.jpg",
+    "GPSLatitude": 46.180572166666664,
+    "GPSLongitude": 6.079565111111111,
+    "sphere": "S01"
   },
   {
-    "filename": "21-07-21-image360_OUEST.jpg",
-    "date": "21-07-21",
-    "GPSLatitude": [
-      46,
-      10,
-      50.2084
-    ],
-    "GPSLongitude": [
-      6,
-      4,
-      46.9721
-    ],
-    "sphere": "S01",
-    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-07-21-image360_OUEST.jpg",
-    "project": "bernex"
+    "project": "bernex",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-06-21-image360_EST.jpg",
+    "date": "21-06-21",
+    "filename": "21-06-21-image360_EST.jpg",
+    "GPSLatitude": 46.18070930555555,
+    "GPSLongitude": 6.080723694444444,
+    "sphere": "S02"
   },
   {
-    "filename": "22-02-22-fevrier2022_360.jpg",
-    "date": "22-02-22",
-    "GPSLatitude": [
-      46,
-      10,
-      50.2929
-    ],
-    "GPSLongitude": [
-      6,
-      4,
-      50.4233
-    ],
-    "sphere": "S02",
-    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/22-02-22-fevrier2022_360.jpg",
-    "project": "bernex"
+    "project": "bernex",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-06-21-image360_OUEST.jpg",
+    "date": "21-06-21",
+    "filename": "21-06-21-image360_OUEST.jpg",
+    "GPSLatitude": 46.18059808333333,
+    "GPSLongitude": 6.079775,
+    "sphere": "S01"
   },
   {
-    "filename": "21-12-21-decembre2021_360.jpg",
-    "date": "21-12-21",
-    "GPSLatitude": [
-      46,
-      10,
-      49.9379
-    ],
-    "GPSLongitude": [
-      6,
-      4,
-      47.1406
-    ],
-    "sphere": "S01",
-    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-12-21-decembre2021_360.jpg",
-    "project": "bernex"
-  },
-  {
-    "filename": "21-11-21-finNovembre2022_360.jpg",
-    "date": "21-11-21",
-    "GPSLatitude": [
-      46,
-      10,
-      49.7639
-    ],
-    "GPSLongitude": [
-      6,
-      4,
-      47.1432
-    ],
-    "sphere": "S01",
-    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-11-21-finNovembre2022_360.jpg",
-    "project": "bernex"
-  },
-  {
-    "filename": "21-07-21-image360_EST.jpg",
-    "date": "21-07-21",
-    "GPSLatitude": [
-      46,
-      10,
-      50.3586
-    ],
-    "GPSLongitude": [
-      6,
-      4,
-      50.7224
-    ],
-    "sphere": "S02",
+    "project": "bernex",
     "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-07-21-image360_EST.jpg",
-    "project": "bernex"
+    "date": "21-07-21",
+    "filename": "21-07-21-image360_EST.jpg",
+    "GPSLatitude": 46.18065516666667,
+    "GPSLongitude": 6.080756222222222,
+    "sphere": "S02"
   },
   {
-    "filename": "22-01-22-BSM-image-janvier-2.jpg",
-    "date": "22-01-22",
-    "GPSLatitude": [
-      46,
-      10.83234,
-      0
-    ],
-    "GPSLongitude": [
-      6,
-      4.78332,
-      0
-    ],
-    "sphere": "S01",
+    "project": "bernex",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-07-21-image360_OUEST.jpg",
+    "date": "21-07-21",
+    "filename": "21-07-21-image360_OUEST.jpg",
+    "GPSLatitude": 46.18061344444444,
+    "GPSLongitude": 6.079714472222222,
+    "sphere": "S01"
+  },
+  {
+    "project": "bernex",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-08-21-360-01.jpg",
+    "date": "21-08-21",
+    "filename": "21-08-21-360-01.jpg",
+    "GPSLatitude": 46.18052158333333,
+    "GPSLongitude": 6.079640749999999,
+    "sphere": "S01"
+  },
+  {
+    "project": "bernex",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-08-21-360-02.jpg",
+    "date": "21-08-21",
+    "filename": "21-08-21-360-02.jpg",
+    "GPSLatitude": 46.18062836111111,
+    "GPSLongitude": 6.080646166666666,
+    "sphere": "S02"
+  },
+  {
+    "project": "bernex",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-08-21-360-03.jpg",
+    "date": "21-08-21",
+    "filename": "21-08-21-360-03.jpg",
+    "GPSLatitude": 46.18052836111111,
+    "GPSLongitude": 6.079638722222222,
+    "sphere": "S01"
+  },
+  {
+    "project": "bernex",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-09-21-Image360-EST.jpg",
+    "date": "21-09-21",
+    "filename": "21-09-21-Image360-EST.jpg",
+    "GPSLatitude": 46.18083738888889,
+    "GPSLongitude": 6.080844055555556,
+    "sphere": "S02"
+  },
+  {
+    "project": "bernex",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-09-21-Image_360_OUEST.jpg",
+    "date": "21-09-21",
+    "filename": "21-09-21-Image_360_OUEST.jpg",
+    "GPSLatitude": 46.180531333333334,
+    "GPSLongitude": 6.079772999999999,
+    "sphere": "S01"
+  },
+  {
+    "project": "bernex",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-10-21-debutNovembre2021_2eme360.jpg",
+    "date": "21-10-21",
+    "filename": "21-10-21-debutNovembre2021_2eme360.jpg",
+    "GPSLatitude": 46.18055016666666,
+    "GPSLongitude": 6.079760888888889,
+    "sphere": "S01"
+  },
+  {
+    "project": "bernex",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-10-21-debutNovembre2021_360.jpg",
+    "date": "21-10-21",
+    "filename": "21-10-21-debutNovembre2021_360.jpg",
+    "GPSLatitude": 46.18074847222222,
+    "GPSLongitude": 6.0807604444444445,
+    "sphere": "S02"
+  },
+  {
+    "project": "bernex",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-11-21-finNovembre2022_2eme360.jpg",
+    "date": "21-11-21",
+    "filename": "21-11-21-finNovembre2022_2eme360.jpg",
+    "GPSLatitude": 46.180723944444445,
+    "GPSLongitude": 6.080743666666667,
+    "sphere": "S02"
+  },
+  {
+    "project": "bernex",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-11-21-finNovembre2022_360.jpg",
+    "date": "21-11-21",
+    "filename": "21-11-21-finNovembre2022_360.jpg",
+    "GPSLatitude": 46.18048997222222,
+    "GPSLongitude": 6.079762,
+    "sphere": "S01"
+  },
+  {
+    "project": "bernex",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/21-12-21-decembre2021_360.jpg",
+    "date": "21-12-21",
+    "filename": "21-12-21-decembre2021_360.jpg",
+    "GPSLatitude": 46.18053830555555,
+    "GPSLongitude": 6.079761277777777,
+    "sphere": "S01"
+  },
+  {
+    "project": "bernex",
     "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/22-01-22-BSM-image-janvier-2.jpg",
-    "project": "bernex"
+    "date": "22-01-22",
+    "filename": "22-01-22-BSM-image-janvier-2.jpg",
+    "GPSLatitude": 46.180539,
+    "GPSLongitude": 6.079722,
+    "sphere": "S01"
   },
   {
-    "filename": "22-01-22-BSM-image-janvier.jpg",
-    "date": "22-01-22",
-    "GPSLatitude": [
-      46,
-      10.84476,
-      0
-    ],
-    "GPSLongitude": [
-      6,
-      4.84446,
-      0
-    ],
-    "sphere": "S02",
+    "project": "bernex",
     "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/22-01-22-BSM-image-janvier.jpg",
-    "project": "bernex"
+    "date": "22-01-22",
+    "filename": "22-01-22-BSM-image-janvier.jpg",
+    "GPSLatitude": 46.180746,
+    "GPSLongitude": 6.080741,
+    "sphere": "S02"
+  },
+  {
+    "project": "bernex",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/22-02-22-fevrier2022_2eme360.jpg",
+    "date": "22-02-22",
+    "filename": "22-02-22-fevrier2022_2eme360.jpg",
+    "GPSLatitude": 46.180582027777774,
+    "GPSLongitude": 6.079758555555555,
+    "sphere": "S01"
+  },
+  {
+    "project": "bernex",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/bernex/22-02-22-fevrier2022_360.jpg",
+    "date": "22-02-22",
+    "filename": "22-02-22-fevrier2022_360.jpg",
+    "GPSLatitude": 46.180636916666664,
+    "GPSLongitude": 6.080673138888889,
+    "sphere": "S02"
   }
 ]

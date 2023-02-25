@@ -58,6 +58,7 @@ function BernexScene() {
   // les fonctions suivantes sont appelées lorsqu'un bouton est cliqué
   const changeSphereTexture = (id) => {
     console.log("Sphere id ", id);
+
     setCurrentSphere(id);
   };
 
@@ -102,6 +103,7 @@ function BernexScene() {
         if (obj) {
           const { sphere, imgUrl } = obj;
           spheresToAdd.push(sphere);
+          console.log("Spheres to add ", sphere);
           if (sphere === currentSphere) {
             setImgSrc(imgUrl);
           }
@@ -112,7 +114,14 @@ function BernexScene() {
   }, [imgUrls]);
 
   const changeImgSrc = (date) => {
-    setCurrentDate(date);
+    console.log("New date ", date);
+    datas[date].forEach((obj) => {
+      if (obj) {
+        const { sphere } = obj;
+        console.log("Point of view present in next scene ", sphere);
+      }
+    });
+    //setCurrentDate(date);
   };
 
   return (

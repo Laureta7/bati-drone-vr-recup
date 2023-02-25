@@ -2,7 +2,12 @@ import React, { useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 
 function Button({ insideSpheres, currentSphere, pos, onClick }) {
-  //console.log("inside s", insideSpheres);
+  var working = true;
+  // if (currentSphere)
+  insideSpheres.forEach((element) => {
+    //console.log(element);
+  });
+  console.log("inside s", insideSpheres);
   const [active, setActive] = useState(false);
   const length = insideSpheres.length;
   const positions = Array.from({ length: length }, (_, index) => [
@@ -13,10 +18,17 @@ function Button({ insideSpheres, currentSphere, pos, onClick }) {
   if (!pos) {
     pos = positions;
   }
+
   return (
     <>
       {pos.map((position, index) => {
-        if (insideSpheres[index] !== currentSphere) {
+        if (insideSpheres[index] !== currentSphere && insideSpheres[index]) {
+          console.log(
+            "inside button ",
+            insideSpheres[index],
+            " CS ",
+            currentSphere
+          );
           return (
             <Sphere
               key={index}

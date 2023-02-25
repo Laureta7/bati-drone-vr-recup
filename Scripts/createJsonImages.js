@@ -1,5 +1,3 @@
-const { PI } = require("aws-sdk");
-const { create } = require("domain");
 const fs = require("fs");
 const path = require("path");
 var ExifImage = require("node-exif").ExifImage;
@@ -10,6 +8,16 @@ let oldviewPoints = [
   { lat: 46.18070930555555, long: 6.080723694444444 },
   { lat: 46.18083738888889, long: 6.080844055555556 },
 ];
+let projectsViewPoints = {
+  bernex: [
+    { lat: 46.180517, long: 6.079487 },
+    { lat: 46.18055, long: 6.0807 },
+  ],
+  lerolliet: [
+    { lat: 46.180517, long: 6.079487 },
+    { lat: 46.18055, long: 6.0807 },
+  ],
+};
 let viewPoints = [
   { lat: 46.180517, long: 6.079487 },
   { lat: 46.18055, long: 6.0807 },

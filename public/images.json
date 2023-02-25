@@ -30,7 +30,22 @@
     "sphere": "S01"
   },
   {
-    "filename": "21-09-21-Image_360_ EST.jpg",
+    "filename": "21-09-21-Image_360_OUEST.jpg",
+    "date": "21-09-21",
+    "GPSLatitude": [
+      46,
+      10,
+      49.9128
+    ],
+    "GPSLongitude": [
+      6,
+      4,
+      47.1828
+    ],
+    "sphere": "S01"
+  },
+  {
+    "filename": "21-09-21-Image360-EST.jpg",
     "date": "21-09-21",
     "GPSLatitude": [
       46,
@@ -60,36 +75,6 @@
     "sphere": "S02"
   },
   {
-    "filename": "21-09-21-Image_360_OUEST.jpg",
-    "date": "21-09-21",
-    "GPSLatitude": [
-      46,
-      10,
-      49.9128
-    ],
-    "GPSLongitude": [
-      6,
-      4,
-      47.1828
-    ],
-    "sphere": "S01"
-  },
-  {
-    "filename": "21-08-21-360-03.jpg",
-    "date": "21-08-21",
-    "GPSLatitude": [
-      46,
-      10,
-      49.9021
-    ],
-    "GPSLongitude": [
-      6,
-      4,
-      46.6994
-    ],
-    "sphere": "S01"
-  },
-  {
     "filename": "21-10-21-debutNovembre2021_2eme360.jpg",
     "date": "21-10-21",
     "GPSLatitude": [
@@ -105,17 +90,17 @@
     "sphere": "S01"
   },
   {
-    "filename": "21-08-21-360-01.jpg",
+    "filename": "21-08-21-360-03.jpg",
     "date": "21-08-21",
     "GPSLatitude": [
       46,
       10,
-      49.8777
+      49.9021
     ],
     "GPSLongitude": [
       6,
       4,
-      46.7067
+      46.6994
     ],
     "sphere": "S01"
   },
@@ -180,62 +165,17 @@
     "sphere": "S02"
   },
   {
-    "filename": "21-05-21-Image_360_OUEST.jpg",
-    "date": "21-05-21",
+    "filename": "21-08-21-360-01.jpg",
+    "date": "21-08-21",
     "GPSLatitude": [
       46,
       10,
-      50.0598
+      49.8777
     ],
     "GPSLongitude": [
       6,
       4,
-      46.4344
-    ],
-    "sphere": "S01"
-  },
-  {
-    "filename": "21-07-21-image360_OUEST.jpg",
-    "date": "21-07-21",
-    "GPSLatitude": [
-      46,
-      10,
-      50.2084
-    ],
-    "GPSLongitude": [
-      6,
-      4,
-      46.9721
-    ],
-    "sphere": "S01"
-  },
-  {
-    "filename": "22-02-22-fevrier2022_360.jpg",
-    "date": "22-02-22",
-    "GPSLatitude": [
-      46,
-      10,
-      50.2929
-    ],
-    "GPSLongitude": [
-      6,
-      4,
-      50.4233
-    ],
-    "sphere": "S02"
-  },
-  {
-    "filename": "21-12-21-decembre2021_360.jpg",
-    "date": "21-12-21",
-    "GPSLatitude": [
-      46,
-      10,
-      49.9379
-    ],
-    "GPSLongitude": [
-      6,
-      4,
-      47.1406
+      46.7067
     ],
     "sphere": "S01"
   },
@@ -255,6 +195,51 @@
     "sphere": "S01"
   },
   {
+    "filename": "21-07-21-image360_OUEST.jpg",
+    "date": "21-07-21",
+    "GPSLatitude": [
+      46,
+      10,
+      50.2084
+    ],
+    "GPSLongitude": [
+      6,
+      4,
+      46.9721
+    ],
+    "sphere": "S01"
+  },
+  {
+    "filename": "21-05-21-Image_360_OUEST.jpg",
+    "date": "21-05-21",
+    "GPSLatitude": [
+      46,
+      10,
+      50.0598
+    ],
+    "GPSLongitude": [
+      6,
+      4,
+      46.4344
+    ],
+    "sphere": "S01"
+  },
+  {
+    "filename": "22-02-22-fevrier2022_360.jpg",
+    "date": "22-02-22",
+    "GPSLatitude": [
+      46,
+      10,
+      50.2929
+    ],
+    "GPSLongitude": [
+      6,
+      4,
+      50.4233
+    ],
+    "sphere": "S02"
+  },
+  {
     "filename": "21-07-21-image360_EST.jpg",
     "date": "21-07-21",
     "GPSLatitude": [
@@ -268,6 +253,21 @@
       50.7224
     ],
     "sphere": "S02"
+  },
+  {
+    "filename": "21-12-21-decembre2021_360.jpg",
+    "date": "21-12-21",
+    "GPSLatitude": [
+      46,
+      10,
+      49.9379
+    ],
+    "GPSLongitude": [
+      6,
+      4,
+      47.1406
+    ],
+    "sphere": "S01"
   },
   {
     "filename": "22-01-22-BSM-image-janvier-2.jpg",
