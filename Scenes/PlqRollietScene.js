@@ -74,6 +74,15 @@ function PlqScene() {
       .catch((error) => console.log(error));
   }, []);
 
+  async function cacheImages(imageUrls) {
+    if (imageUrls) {
+      const cacheName = "image-cache";
+      const cache = await caches.open(cacheName);
+      await cache.addAll(imageUrls);
+      console.log("Images cached successfully");
+    }
+  }
+
   // les fonctions suivantes sont appelées lorsqu'un bouton est cliqué
   const changeSphereTexture = (id) => {
     setCurrentSphere(id);
@@ -118,7 +127,8 @@ function PlqScene() {
   //TRIGGER APRES CHANGEMENT IMGSURL
   useEffect(() => {
     const spheresToAdd = [];
-
+    //MIse en cache test :
+    //cacheImages(imgUrls);
     if (datas[currentDate]) {
       datas[currentDate].forEach((obj) => {
         if (obj) {

@@ -1,7 +1,7 @@
 [
   {
     "project": "ROL",
-    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/ROL/190223-est-plq.jpg",
+    "imgUrl": " https://d3hb7ncqn860fa.cloudfront.net/ROL/190223-est-plq.jpg",
     "date": "2023-02-19",
     "filename": "190223-est-plq.jpg",
     "GPSLatitude": 46.17392133333333,
@@ -11,7 +11,7 @@
   },
   {
     "project": "ROL",
-    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/ROL/190223-west-plq.jpg",
+    "imgUrl": " https://d3hb7ncqn860fa.cloudfront.net/ROL/190223-west-plq.jpg",
     "date": "2023-02-19",
     "filename": "190223-west-plq.jpg",
     "GPSLatitude": 46.17253336111111,

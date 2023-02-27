@@ -25,8 +25,8 @@ let projectsViewPoints = {
   ],
 };
 
-//let projectAWS = "ROL";
-let projectAWS = "bernex";
+let projectAWS = "ROL";
+//let projectAWS = "bernex";
 //BER = Bernex ROL = rolliet
 let project = ["BER", "ROL"];
 
@@ -65,7 +65,8 @@ s3.listObjects(params, (err, data) => {
         // const sphere = filename.split("-")[0];
         // const date = filename.split("-")[1].slice(0, -4);
         // const formattedDate = date.replace(/(\d{2})(\d{2})(\d{2})/, "$1-$2-$3");
-        const imgUrl = `https://${params.Bucket}.s3.${bucketregion}.amazonaws.com/${key}`;
+        // const imgUrl = `https://${params.Bucket}.s3.${bucketregion}.amazonaws.com/${key}`;
+        const imgUrl = ` https://d3hb7ncqn860fa.cloudfront.net/${key}`;
 
         result.push(imgUrl);
       }
@@ -101,7 +102,7 @@ async function exifrFunction(files) {
       // .concat("-" + splittedKey[2]);
 
       const image = {
-        project: project[0],
+        project: project[1],
         imgUrl: file,
         date: date,
         filename: filename,
@@ -215,7 +216,7 @@ function transformeCoordinates(coordinates) {
 function createJson(datas) {
   try {
     const json = JSON.stringify(datas, null, 2);
-    fs.writeFileSync(`../public/${project[0]}.json`, json, "utf8");
+    fs.writeFileSync(`../public/${project[1]}.json`, json, "utf8");
   } catch (error) {
     console.log("Il y a eu une erreur dans l'écriture du fichier Json ", error);
   }

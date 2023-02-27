@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 
 function Button({ insideSpheres, currentSphere, pos, onClick }) {
@@ -64,13 +64,21 @@ function Sphere({ position, onClick, active, setActive, id }) {
     }
     //setActive(!active);
   };
+  const calculateMousePosition = () => {};
+  useEffect(() => {
+    document.addEventListener("mousemove", getMousePosition);
+  }, [hovered]);
 
   return (
     <mesh
       ref={mesh}
       position={position}
       onClick={handleClick}
-      onPointerOver={() => setHovered(true)} // Modification de l'état hovered
+      onPointerOver={() => {
+        calculateMousePosition();
+        setHovered(true);
+        this.removeEventListener("pointerover", handlePointerOver);
+      }} // Modification de l'état hovered
       onPointerOut={() => setHovered(false)} // Modification de l'état hovered
     >
       <sphereGeometry args={[0.015, 32, 16]} />
@@ -79,6 +87,14 @@ function Sphere({ position, onClick, active, setActive, id }) {
       />
     </mesh>
   );
+}
+function getMousePosition(event) {
+  const mousePos = [];
+  const posX = event.clientX;
+  const posY = event.clientY;
+  mousePos.push(posX);
+  mousePos.push(posY);
+  console.log(`La position de la souris est (${posX}, ${posY})`);
 }
 
 export default Button;
