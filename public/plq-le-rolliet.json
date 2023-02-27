@@ -1,0 +1,173 @@
+[
+  {
+    "project": "plq-le-rolliet",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/S00-100223.jpg",
+    "date": "2023-02-19",
+    "filename": "S00-100223.jpg",
+    "GPSLatitude": 46.17392133333333,
+    "GPSLongitude": 6.106948138888889,
+    "sphere": "S010"
+  },
+  {
+    "project": "plq-le-rolliet",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/S00-170223.jpg",
+    "date": "2023-02-19",
+    "filename": "S00-170223.jpg",
+    "GPSLatitude": 46.17253336111111,
+    "GPSLongitude": 6.107552111111111,
+    "sphere": "S05"
+  },
+  {
+    "project": "plq-le-rolliet",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/S00-190223.jpg",
+    "date": "2023-02-19",
+    "filename": "S00-190223.jpg",
+    "GPSLatitude": 46.17392133333333,
+    "GPSLongitude": 6.106948138888889,
+    "sphere": "S010"
+  },
+  {
+    "project": "plq-le-rolliet",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/S01-100223.jpg",
+    "date": "2023-02-19",
+    "filename": "S01-100223.jpg",
+    "GPSLatitude": 46.17253336111111,
+    "GPSLongitude": 6.107552111111111,
+    "sphere": "S05"
+  },
+  {
+    "project": "plq-le-rolliet",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/S01-170223.jpg",
+    "date": "2023-02-19",
+    "filename": "S01-170223.jpg",
+    "GPSLatitude": 46.17253336111111,
+    "GPSLongitude": 6.107552111111111,
+    "sphere": "S05"
+  },
+  {
+    "project": "plq-le-rolliet",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/S01-190223.jpg",
+    "date": "2023-02-19",
+    "filename": "S01-190223.jpg",
+    "GPSLatitude": 46.17253336111111,
+    "GPSLongitude": 6.107552111111111,
+    "sphere": "S05"
+  },
+  {
+    "project": "plq-le-rolliet",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/S02-100223.jpg",
+    "date": "2023-02-19",
+    "filename": "S02-100223.jpg",
+    "GPSLatitude": 46.17253336111111,
+    "GPSLongitude": 6.107552111111111,
+    "sphere": "S05"
+  },
+  {
+    "project": "plq-le-rolliet",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/S02-190223.jpg",
+    "date": "2023-02-19",
+    "filename": "S02-190223.jpg",
+    "GPSLatitude": 46.17253336111111,
+    "GPSLongitude": 6.107552111111111,
+    "sphere": "S05"
+  },
+  {
+    "project": "plq-le-rolliet",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/S03-100223.jpg",
+    "date": "2023-02-19",
+    "filename": "S03-100223.jpg",
+    "GPSLatitude": 46.17253336111111,
+    "GPSLongitude": 6.107552111111111,
+    "sphere": "S05"
+  },
+  {
+    "project": "plq-le-rolliet",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/S03-190223.jpg",
+    "date": "2023-02-19",
+    "filename": "S03-190223.jpg",
+    "GPSLatitude": 46.17253336111111,
+    "GPSLongitude": 6.107552111111111,
+    "sphere": "S05"
+  },
+  {
+    "project": "plq-le-rolliet",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/S04-100223.jpg",
+    "date": "2023-02-19",
+    "filename": "S04-100223.jpg",
+    "GPSLatitude": 46.17253336111111,
+    "GPSLongitude": 6.107552111111111,
+    "sphere": "S05"
+  },
+  {
+    "project": "plq-le-rolliet",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/S04-190223.jpg",
+    "date": "2023-02-19",
+    "filename": "S04-190223.jpg",
+    "GPSLatitude": 46.17253336111111,
+    "GPSLongitude": 6.107552111111111,
+    "sphere": "S05"
+  },
+  {
+    "project": "plq-le-rolliet",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/S05-100223.jpg",
+    "date": "2023-02-19",
+    "filename": "S05-100223.jpg",
+    "GPSLatitude": 46.17253336111111,
+    "GPSLongitude": 6.107552111111111,
+    "sphere": "S05"
+  },
+  {
+    "project": "plq-le-rolliet",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/S05-190223.jpg",
+    "date": "2023-02-19",
+    "filename": "S05-190223.jpg",
+    "GPSLatitude": 46.17253336111111,
+    "GPSLongitude": 6.107552111111111,
+    "sphere": "S05"
+  },
+  {
+    "project": "plq-le-rolliet",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/S06-190223.jpg",
+    "date": "2023-02-19",
+    "filename": "S06-190223.jpg",
+    "GPSLatitude": 46.17253336111111,
+    "GPSLongitude": 6.107552111111111,
+    "sphere": "S05"
+  },
+  {
+    "project": "plq-le-rolliet",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/S07-190223.jpg",
+    "date": "2023-02-19",
+    "filename": "S07-190223.jpg",
+    "GPSLatitude": 46.17253336111111,
+    "GPSLongitude": 6.107552111111111,
+    "sphere": "S05"
+  },
+  {
+    "project": "plq-le-rolliet",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/S08-190223.jpg",
+    "date": "2023-02-19",
+    "filename": "S08-190223.jpg",
+    "GPSLatitude": 46.17253336111111,
+    "GPSLongitude": 6.107552111111111,
+    "sphere": "S05"
+  },
+  {
+    "project": "plq-le-rolliet",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/S09-190223.jpg",
+    "date": "2023-02-19",
+    "filename": "S09-190223.jpg",
+    "GPSLatitude": 46.17253336111111,
+    "GPSLongitude": 6.107552111111111,
+    "sphere": "S05"
+  },
+  {
+    "project": "plq-le-rolliet",
+    "imgUrl": "https://batilac-cloud-local.s3.eu-west-3.amazonaws.com/plq-le-roliet/S10-190223.jpg",
+    "date": "2023-02-19",
+    "filename": "S10-190223.jpg",
+    "GPSLatitude": 46.17253336111111,
+    "GPSLongitude": 6.107552111111111,
+    "sphere": "S05"
+  }
+]

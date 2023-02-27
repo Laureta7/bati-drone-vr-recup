@@ -15,6 +15,7 @@ function BernexScene() {
   const [currentSphere, setCurrentSphere] = useState();
   const [insideSpheres, setInsideSpheres] = useState([]);
   const [items, setItems] = useState([]);
+  const [usedPositions, setUsedPositions] = useState([]);
   const [datas, setDatas] = useState({});
 
   const pos = [
@@ -24,7 +25,7 @@ function BernexScene() {
 
   // useEffect est utilisé ici pour charger les données à partir d'un fichier JSON
   useEffect(() => {
-    fetch("bernex.json")
+    fetch("BER.json")
       .then((response) => response.json())
       .then((data) => {
         const organizedData = {};
@@ -32,32 +33,46 @@ function BernexScene() {
         // les données sont organisées en fonction de leur date
 
         data.forEach((obj) => {
-          const { date, sphere, imgUrl } = obj;
+          const { date, sphere, imgUrl, positionId } = obj;
           // console.log("date ", date, "sphere ", sphere, "img ", imgUrl);
           if (organizedData[date]) {
-            organizedData[date].push({ sphere, imgUrl });
+            organizedData[date].push({ sphere, imgUrl, positionId });
             // console.log("OUI ", organizedData[date]);
           } else {
-            organizedData[date] = [{ sphere, imgUrl }];
+            organizedData[date] = [{ sphere, imgUrl, positionId }];
             // console.log("Non ", organizedData[date]);
           }
         });
         const sortedDatas = sortObject(organizedData);
         setDatas(sortedDatas);
 
+        // console.log(sortedDatas);
+        //Set la current date à la date la plus récente
         const date = Object.keys(sortedDatas)[0];
         setCurrentDate(date);
+
         const sphere = sortedDatas[date][0].sphere;
         setCurrentSphere(sphere);
+        //console.log("sphere ", sphere);
+
         // console.log("CURRENT DAT ", Object.keys(sortedDatas)[0]);
         setItems(Object.keys(sortedDatas));
+        const memPos = [];
+
+        sortedDatas[date].forEach((obj) => {
+          const { positionId } = obj;
+          //console.log(positionId);
+          memPos.push(pos[positionId]);
+          // console.log(memPos);
+        });
+        setUsedPositions(memPos);
       })
       .catch((error) => console.log(error));
   }, []);
 
   // les fonctions suivantes sont appelées lorsqu'un bouton est cliqué
   const changeSphereTexture = (id) => {
-    console.log("Sphere id ", id);
+    //console.log("Clicked sphere id ", id);
 
     setCurrentSphere(id);
   };
@@ -88,7 +103,14 @@ function BernexScene() {
     }
   }, [currentDate]);
   useEffect(() => {
-    console.log("new sphere ", currentSphere, " newURL ", imgSrc);
+    console.log(
+      "new sphere ",
+      currentSphere,
+      " newURL ",
+      imgSrc,
+      "usedPos ",
+      usedPositions
+    );
   }, [imgSrc]);
 
   //Excécuter quand currentDate change
@@ -103,7 +125,7 @@ function BernexScene() {
         if (obj) {
           const { sphere, imgUrl } = obj;
           spheresToAdd.push(sphere);
-          console.log("Spheres to add ", sphere);
+          // console.log("Spheres to add ", sphere);
           if (sphere === currentSphere) {
             setImgSrc(imgUrl);
           }
@@ -114,14 +136,18 @@ function BernexScene() {
   }, [imgUrls]);
 
   const changeImgSrc = (date) => {
-    console.log("New date ", date);
+    //console.log("New date ", date);
+    const keepPos = [];
     datas[date].forEach((obj) => {
       if (obj) {
-        const { sphere } = obj;
-        console.log("Point of view present in next scene ", sphere);
+        const { positionId } = obj;
+        keepPos.push(pos[positionId]);
       }
     });
-    //setCurrentDate(date);
+    //console.log("New Position  ", keepPos);
+
+    setCurrentDate(date);
+    setUsedPositions(keepPos);
   };
 
   return (
@@ -138,8 +164,7 @@ function BernexScene() {
           <Button
             insideSpheres={insideSpheres}
             currentSphere={currentSphere}
-            pos={pos}
-            position={[1.5, 0, 0]}
+            pos={usedPositions}
             onClick={changeSphereTexture}
           />
         </Canvas>

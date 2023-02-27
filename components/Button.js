@@ -7,7 +7,7 @@ function Button({ insideSpheres, currentSphere, pos, onClick }) {
   insideSpheres.forEach((element) => {
     //console.log(element);
   });
-  console.log("inside s", insideSpheres);
+  //console.log("inside s", insideSpheres);
   const [active, setActive] = useState(false);
   const length = insideSpheres.length;
   const positions = Array.from({ length: length }, (_, index) => [
@@ -22,13 +22,14 @@ function Button({ insideSpheres, currentSphere, pos, onClick }) {
   return (
     <>
       {pos.map((position, index) => {
-        if (insideSpheres[index] !== currentSphere && insideSpheres[index]) {
-          console.log(
+        // console.log(position, " current s", currentSphere);
+        if (insideSpheres[index] !== currentSphere) {
+          /*console.log(
             "inside button ",
             insideSpheres[index],
             " CS ",
             currentSphere
-          );
+          );*/
           return (
             <Sphere
               key={index}

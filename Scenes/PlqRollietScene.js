@@ -16,6 +16,7 @@ function PlqScene() {
   const [currentSphere, setCurrentSphere] = useState("S00");
   const [insideSpheres, setInsideSpheres] = useState([]);
   const [items, setItems] = useState([]);
+  const [usedPositions, setUsedPositions] = useState([]);
   const [datas, setDatas] = useState({});
 
   const pos = [
@@ -31,57 +32,60 @@ function PlqScene() {
     [-0.08962, 0.06667, -0.41154],
     [-0.67447, 0.1, -0.44607],
   ];
-
   // useEffect est utilisé ici pour charger les données à partir d'un fichier JSON
   useEffect(() => {
-    fetch("data.json")
+    fetch("ROL.json")
       .then((response) => response.json())
       .then((data) => {
-        setProjectData(data);
         const organizedData = {};
-        //console.log(data);
         // les données sont organisées en fonction de leur date
 
         data.forEach((obj) => {
-          const { date, sphere, imgUrl } = obj;
+          const { date, sphere, imgUrl, positionId } = obj;
           // console.log("date ", date, "sphere ", sphere, "img ", imgUrl);
           if (organizedData[date]) {
-            organizedData[date].push({ sphere, imgUrl });
+            organizedData[date].push({ sphere, imgUrl, positionId });
             // console.log("OUI ", organizedData[date]);
           } else {
-            organizedData[date] = [{ sphere, imgUrl }];
+            organizedData[date] = [{ sphere, imgUrl, positionId }];
             // console.log("Non ", organizedData[date]);
           }
         });
         const sortedDatas = sortObject(organizedData);
         setDatas(sortedDatas);
 
+        // console.log(sortedDatas);
+        //Set la current date à la date la plus récente
         const date = Object.keys(sortedDatas)[0];
         setCurrentDate(date);
+
         const sphere = sortedDatas[date][0].sphere;
         setCurrentSphere(sphere);
-        // console.log("CURRENT DAT ", Object.keys(sortedDatas)[0]);
+
         setItems(Object.keys(sortedDatas));
+        const memPos = [];
+
+        sortedDatas[date].forEach((obj) => {
+          const { positionId } = obj;
+          memPos.push(pos[positionId]);
+        });
+        setUsedPositions(memPos);
       })
       .catch((error) => console.log(error));
   }, []);
 
   // les fonctions suivantes sont appelées lorsqu'un bouton est cliqué
   const changeSphereTexture = (id) => {
-    console.log("Sphere id ", id);
     setCurrentSphere(id);
   };
 
   useEffect(() => {
-    console.log("Current sphere test ", currentSphere);
-
     if (datas[currentDate]) {
       datas[currentDate].forEach((obj) => {
         if (obj) {
           const { sphere, imgUrl } = obj;
           if (sphere === currentSphere) {
             setImgSrc(imgUrl);
-            console.log("new sphere ", sphere, " newURL ", imgUrl);
           }
         }
       });
@@ -93,20 +97,26 @@ function PlqScene() {
     if (datas[currentDate]) {
       datas[currentDate].forEach((obj) => {
         if (obj) {
-          const { sphere, imgUrl } = obj;
+          const { imgUrl } = obj;
           urlsToAdd.push(imgUrl);
         }
       });
       setImgUrls(urlsToAdd);
     }
   }, [currentDate]);
-
-  //Excécuter quand currentDate change
-  //Mais à jour l'array des images utilisé pour cette nouvelle date
-
-  //Changement imgSrc apres cangemen setImgUrl
   useEffect(() => {
-    console.log("Current sphere test ", currentSphere);
+    console.log(
+      "new sphere ",
+      currentSphere,
+      " newURL ",
+      imgSrc,
+      "usedPos ",
+      usedPositions
+    );
+  }, [imgSrc]);
+
+  //TRIGGER APRES CHANGEMENT IMGSURL
+  useEffect(() => {
     const spheresToAdd = [];
 
     if (datas[currentDate]) {
@@ -114,6 +124,7 @@ function PlqScene() {
         if (obj) {
           const { sphere, imgUrl } = obj;
           spheresToAdd.push(sphere);
+          // console.log("Spheres to add ", sphere);
           if (sphere === currentSphere) {
             setImgSrc(imgUrl);
           }
@@ -124,7 +135,20 @@ function PlqScene() {
   }, [imgUrls]);
 
   const changeImgSrc = (date) => {
+    //console.log("New date ", date);
+    const keepPos = [];
+    datas[date].forEach((obj) => {
+      if (obj) {
+        const { positionId } = obj;
+        keepPos.push(pos[positionId]);
+      }
+    });
+    //console.log("New Position  ", keepPos);
+
+    //update currentdate + usedPositions
+
     setCurrentDate(date);
+    setUsedPositions(keepPos);
   };
 
   return (
@@ -141,7 +165,7 @@ function PlqScene() {
           <Button
             insideSpheres={insideSpheres}
             currentSphere={currentSphere}
-            position={[1.5, 0, 0]}
+            pos={usedPositions}
             onClick={changeSphereTexture}
           />
         </Canvas>
