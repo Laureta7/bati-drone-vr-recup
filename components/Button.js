@@ -64,10 +64,6 @@ function Sphere({ position, onClick, active, setActive, id }) {
     }
     //setActive(!active);
   };
-  const calculateMousePosition = () => {};
-  useEffect(() => {
-    document.addEventListener("mousemove", getMousePosition);
-  }, [hovered]);
 
   return (
     <mesh
@@ -75,9 +71,7 @@ function Sphere({ position, onClick, active, setActive, id }) {
       position={position}
       onClick={handleClick}
       onPointerOver={() => {
-        calculateMousePosition();
         setHovered(true);
-        this.removeEventListener("pointerover", handlePointerOver);
       }} // Modification de l'état hovered
       onPointerOut={() => setHovered(false)} // Modification de l'état hovered
     >
@@ -87,14 +81,6 @@ function Sphere({ position, onClick, active, setActive, id }) {
       />
     </mesh>
   );
-}
-function getMousePosition(event) {
-  const mousePos = [];
-  const posX = event.clientX;
-  const posY = event.clientY;
-  mousePos.push(posX);
-  mousePos.push(posY);
-  console.log(`La position de la souris est (${posX}, ${posY})`);
 }
 
 export default Button;
